@@ -97,7 +97,8 @@
         <a href="https://www.prudential.com.sg/services/useful-links/-/media/Prudential/PDF/nominationforms/nomination_form1.pdf">(表 1)</a>
         并附上受益人的身份证或护照正反面清晰复印件。
         <div class='row justify-content-end'>
-            <a href="https://www.prudential.com.sg/services/useful-links/-/media/Prudential/PDF/nominationforms/nomination_form1.pdf" class='btn btn-primary float-right'>下载表1</a>，
+            <a href="https://www.prudential.com.sg/services/useful-links/-/media/Prudential/PDF/nominationforms/nomination_form1.pdf" class='btn btn-primary float-right'>下载表1</a>
+	    <text onclick="copyToClipboard()"><u>下载表1</u></text>
         </div>
       </div>
     </div>
@@ -284,7 +285,20 @@
 </div>
 </div>
 <br><br>
-
+	<script>
+	function copyToClipboard() {
+	  const el = document.createElement('textarea');
+	  el.value = "https://www.google.com";
+	  el.setAttribute('readonly', '');
+	  el.style.position = 'absolute';
+	  el.style.left = '-9999px';
+	  document.body.appendChild(el);
+	  el.select();
+	  document.execCommand('copy');
+	  alert("Copied the text: " + el.value);
+	  document.body.removeChild(el);
+	};
+</script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
