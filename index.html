@@ -97,7 +97,7 @@
         <a href="https://www.prudential.com.sg/services/useful-links/-/media/Prudential/PDF/nominationforms/nomination_form1.pdf">(表 1)</a>
         并附上受益人的身份证或护照正反面清晰复印件。
         <div class='row justify-content-end'>
-	    <text onclick="copyToClipboard()" class='btn btn-primary float-right'><u>下载表1</u></text>
+	    <text onclick="copyToClipboard()" class='btn btn-primary float-right'>下载表1<</text>
         </div>
       </div>
     </div>
@@ -287,14 +287,14 @@
 	<script>
 	function copyToClipboard() {
 	  const el = document.createElement('textarea');
-	  el.value = "https://www.google.com";
+	  el.value = "https://www.prudential.com.sg/services/useful-links/-/media/Prudential/PDF/nominationforms/nomination_form1.pdf";
 	  el.setAttribute('readonly', '');
 	  el.style.position = 'absolute';
 	  el.style.left = '-9999px';
 	  document.body.appendChild(el);
 	  el.select();
 	  document.execCommand('copy');
-	  alert("Copied the text: " + el.value);
+	  alert("以复制表格链接：" + el.value + "请打开浏览器，复制链接进行浏览");
 	  document.body.removeChild(el);
 	};
 </script>
